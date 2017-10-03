@@ -1,0 +1,27 @@
+{
+  "name": "logging-express-mw",
+  "version": "0.7.1",
+  "description": "Logs prettified to console",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admurali/logging-express-mw.git"
+  },
+  "keywords": [
+    "logging",
+    "express"
+  ],
+  "dependencies": {
+    "winston": "^2.3.1"
+  },
+  "author": "Adithya Murali <amurali@zetametrics.com>",
+  "contributors": "Adithya Murali <amurali@zetametrics.com>, Sriram Rathinavelu <srathinavelu@zetametrics.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/admurali/logging-express-mw/issues"
+  },
+  "homepage": "https://github.com/admurali/logging-express-mw#readme"
+}
