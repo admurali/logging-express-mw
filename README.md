@@ -65,7 +65,7 @@ The logging middleware uses winston. In your server code before you initialize t
 
 For more information refer to winston documentation at https://github.com/winstonjs/winston/blob/master/README.md
 
-### Express Integeration (Advanced)
+### Express Integration
 
 In the example, below we utilize winston module to create our configuration object for ***logging-express-mw***.
 
@@ -95,7 +95,7 @@ app.use(logger.middleware(loggerConfig));
 ```
 
 
-### Usage (Advanced)
+### Usage
 
 In any API functions or other middleware(s) with access to the ***req*** object, we can call logging middleware.
 
