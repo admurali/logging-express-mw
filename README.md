@@ -1,6 +1,8 @@
 # logging-express-mw
 
-A middleware logger for express. Uses and accepts a customized `winston` configuration if one is given.
+[![NPM](https://nodei.co/npm/logging-express-mw.png?compact=true)](https://nodei.co/npm/logging-express-mw/)
+
+A middleware logger for express. Uses and accepts a customized `winston` configuration if given one.
 
 ## Installation
 
