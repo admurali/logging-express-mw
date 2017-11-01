@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/logging-express-mw.png?compact=true)](https://nodei.co/npm/logging-express-mw/)
 
-A middleware logger for express. Uses and accepts a customized `winston` configuration if given one.
+A middleware logger for express framework that uses and accepts a customized `winston` configuration if given one.
 
 ## Installation
 
@@ -28,9 +28,9 @@ app.use(logging.middleware());
 
 ### Usage
 
-In any API functions or other middleware(s) with access to the ***req*** object, we can call logging middleware.
+The logging middleware can be called in any API functions or other middleware(s) with access to the ***req*** object.
 
-For example if we create a getUser endpoint such as:
+For example, we can create a *getUser* endpoint such as:
 ```
 function getUser(req, res) {
   req.logger.silly('log level - silly');
@@ -54,7 +54,7 @@ Based on default configuration, we will see the following output:
 
 ## Logging - Advanced Configuration
 
-The logging middleware uses winston. In your server code before you initialize this module you can pass a configuration object to customize logging level, format  and types of log transports to use.
+The logging middleware uses *winston*. Before you initialize this module, you can pass a configuration object to customize logging level, format, and types of log transports.
 
 | Name          | Default                |  Description    |
 | ------------- | ---------------------- | --------------- |
@@ -63,11 +63,11 @@ The logging middleware uses winston. In your server code before you initialize t
 | `transports`  | `[]` _(No transports)_ | Set of logging targets for `info` messages                 |
 | `exitOnError` | `true`                 | If false, handled exceptions will not cause `process.exit` |
 
-For more information refer to winston documentation at https://github.com/winstonjs/winston/blob/master/README.md
+For more information refer to *winston* documentation at https://github.com/winstonjs/winston/blob/master/README.md
 
 ### Express Integration
 
-In the example, below we utilize winston module to create our configuration object for ***logging-express-mw***.
+In the example below, we utilize the *winston* module to create our configuration object for ***logging-express-mw***.
 
 *app.js*:
 ```
@@ -97,9 +97,9 @@ app.use(logger.middleware(loggerConfig));
 
 ### Usage
 
-In any API functions or other middleware(s) with access to the ***req*** object, we can call logging middleware.
+The logging middleware can be called in any API functions or other middleware(s) with access to the ***req*** object.
 
-For example if we create a getUser endpoint such as:
+For example, we can create a *getUser* endpoint such as:
 ```
 function getUser(req, res) {
   req.logger.silly('log level - silly');
@@ -113,7 +113,7 @@ function getUser(req, res) {
 }
 ```
 
-Based on configuration above, we will see the following output:
+Based on the custom configuration above, we will see the following output:
 ```
 2017-10-28T22:46:09.853Z [right meow!] silly: log level - silly
 2017-10-28T22:46:09.853Z [right meow!] debug: log level - debug
