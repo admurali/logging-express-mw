@@ -1,6 +1,6 @@
 {
   "name": "logging-express-mw",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Logs prettified to console",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "express"
   ],
   "dependencies": {
-    "winston": "^2.3.1"
+    "winston": "3.0.0-rc1"
   },
   "author": "Adithya Murali <amurali@zetametrics.com>",
   "contributors": "Adithya Murali <amurali@zetametrics.com>, Sriram Rathinavelu <srathinavelu@zetametrics.com>",

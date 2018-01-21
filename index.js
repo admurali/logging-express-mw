@@ -1,21 +1,26 @@
 /* ********************************************************************
  * Logs prettified to console.
- ********************************************************************/
-/*jshint node: true*/
-/*jshint esversion: 6*/
+ **********************************************************************
+*/
 
 (function() {
-
-  var winston = require('winston');
-  var uuidv4 = require('uuid/v4');
+  const { createLogger, format, transports } = require('winston');
 
   module.exports = {
-    middleware: function() {
-      return function (req, res, next) {
-        req.logger = winston;
-        next();
+    middleware: (config) => {
+      const loggingFunc = (req, res, next) => {
+      const logger = createLogger({
+          level: (config && config.level) || 'info',
+          transports: (config && config.transports) || ([
+            new transports.Console(),
+          ]),
+          format: (config && config.format) || format.json(),
+          exitOnError: (config && config.exitOnError) || true,
+        });
+      req.logger = logger;
+      next();
       };
-    },
-    logger: winston
+      return loggingFunc;
+    }
   };
 }());
